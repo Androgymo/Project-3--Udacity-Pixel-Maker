@@ -5,21 +5,22 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Francois+One|Gugi|Rajdhani|Righteous" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="designs.js"></script>
 </head>
 <body>
     <h1 style="font-family: Gugi">Lab: Pixel Art Maker</h1>
     <h3 style="font-family: Rajdhani">Choose Grid Size</h3>
+
     <form id="sizePicker" style="font-family: Inconsolata">
 
         Grid Height:
-        <input type="number" id="input_height" name="height" min="1" max="500" value="1">
-
+        <input type="number" id="input_height" name="height" min="1" max="500" value="3">
         Grid Width:
-        <input type="number" id="input_width" name="width" min="1" max="500" value="1">
+        <input type="number" id="input_width" name="width" min="1" max="500" value="3">
         <input id="button" type="submit">
+        <button id="button" type="submit" class="clear">Clear</button>
     </form>
     
     <h3 style="font-family: Rajdhani">Pick A Color</h3>
