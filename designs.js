@@ -1,12 +1,22 @@
-//1.  Select color input
-
-// Select size input
-
 // When size is submitted by the user, call makeGrid()
-$(function (){
-	$("#sizePicker").submit(function makeGrid(grid){
+
+$(function(){
+	// Select color input
+	$("#colorPicker").on("change",function(){
+		 return $("#colorPicker").val();
+		});
+
+	// Select size input
+
+
+	$("#sizePicker").on("submit", function makeGrid(grid){
+
 		var rows = $("#input_height").val(); // This holds the value of the grid height
 		var columns = $("#input_width").val(); // This holds the value of the grid width
+		
+
+
+
 		for(var i = 1; i <= rows; i++){ 
 			$("table").append("<tr></tr>");
 			for(var j = 1; j <= columns; j++){

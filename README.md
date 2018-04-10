@@ -1,4 +1,7 @@
-# Pixel Art Maker Project
+# This is Dolores Mutuku's Pixel Art Maker Project
+This is part of the Grow with Google Scholarship. 
+
+This is my Version of the Pixel Art Maker
 
 ## Table of Contents
 
