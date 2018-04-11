@@ -1,33 +1,27 @@
-// When size is submitted by the user, call makeGrid()
+
 
 $(function(){
-	$("#sizePicker").on("submit", function makeGrid(grid){
-		 
-		var rows = $("#input_height").val(); // # of the grid height
-		var columns = $("#input_width").val(); // # the grid width
-		
+	$('#sizePicker').submit(function createGrid(event) {  
+	  	$('table tr').remove(); //clear the table
+	  	                         
+		var rows = $('#input_height').val();  
+		var cells = $('#input_width').val();  
+	  
+	  	for(var i = 1;i <= rows; i++) {
+	    	$('table').append("<tr></tr>");
+	    	for (var j = 1;j <= cells; j++) {
+	      		$( 'tr:last').append("<td></td>");         
+	      		$('td').addClass('cells');
+	   		}
 
-		for(var i = 1; i <= rows; i++){ 
-			$("table").append("<tr></tr>");
-			for(var j = 1; j <= columns; j++){
-				$("tr:last").append("<td></td>");
-				$("td").addClass("cells");
-			}
-			grid.preventDefault();
-			$(".cells").click(function(event){
-				var color = $("#colorPicker").val();
-				$(event.target).css("background-color", color); 
-			})
-		}
-	});
+	   		event.preventDefault(); 
+	   		
+	   		$(".cells").click(function(draw){
+	   			var color = $("#colorPicker").val();
+	   			$(draw.target).css("background-color", color);
+	   		});      
+	 	}
 
-	$("button").click(function removeGrid(table){
-		$('<tr></tr>').remove(table);
 	});
 });
-
-
-
-
-
 

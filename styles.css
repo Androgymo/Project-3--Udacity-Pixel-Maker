@@ -37,10 +37,7 @@ td /* rows */{
     width: 20px;
 }
 
-.clear {
-    font-family: Inconsolata;
-    width: 6em;
-}
+
 
 input {
     font-family: Inconsolata;
