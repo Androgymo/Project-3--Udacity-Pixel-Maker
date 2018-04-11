@@ -1,13 +1,11 @@
 // When size is submitted by the user, call makeGrid()
 
 $(function(){
-		
 	$("#sizePicker").on("submit", function makeGrid(grid){
-
+		 
 		var rows = $("#input_height").val(); // # of the grid height
 		var columns = $("#input_width").val(); // # the grid width
 		
-
 
 		for(var i = 1; i <= rows; i++){ 
 			$("table").append("<tr></tr>");
@@ -15,13 +13,16 @@ $(function(){
 				$("tr:last").append("<td></td>");
 				$("td").addClass("cells");
 			}
-			
+			grid.preventDefault();
 			$(".cells").click(function(event){
 				var color = $("#colorPicker").val();
 				$(event.target).css("background-color", color); 
 			})
-			grid.preventDefault();
 		}
+	});
+
+	$("button").click(function removeGrid(table){
+		$('<tr></tr>').remove(table);
 	});
 });
 
@@ -30,5 +31,3 @@ $(function(){
 
 
 
-
-// Your code goes here
