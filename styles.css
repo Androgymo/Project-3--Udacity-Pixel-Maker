@@ -1,5 +1,8 @@
+
 body {
     text-align: center;
+    background-color: rgba(0, 150, 136, 0.6);
+    color: #fff;
 }
 
 h1 {
@@ -36,8 +39,6 @@ tr /* column */{
 td /* rows */{
     width: 20px;
 }
-
-
 
 input {
     font-family: Inconsolata;

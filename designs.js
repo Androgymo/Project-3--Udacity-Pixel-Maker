@@ -1,5 +1,3 @@
-
-
 $(function(){
 	$('#sizePicker').submit(function createGrid(event) {  
 	  	$('table tr').remove(); //clear the table
